@@ -20,7 +20,7 @@ export default Ember.Route.extend({
    newReview.save().then(function() {
      return place.save();
    });
-   this.transitionTo('index', place);
+   this.transitionTo('index');
   }
   }
 });
