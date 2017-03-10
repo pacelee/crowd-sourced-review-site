@@ -1,0 +1,16 @@
+<div class="container">
+  {{new-place place=place sendPlace="sendPlace"}}
+  <br>
+  {{#each model.places as |place|}}
+  <div class="col-md-4 place">
+  {{review-popularity place}} <br>
+  Place: {{place.location}} <br>
+  Type: {{place.type}} <br>
+
+  {{#link-to 'place' place.id}}
+  View Details & Reviews
+  {{/link-to}}
+  {{new-review saveReview="saveReview" place=place}}
+  </div>
+  {{/each}}
+</div>

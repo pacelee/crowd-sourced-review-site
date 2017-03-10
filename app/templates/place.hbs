@@ -1,0 +1,10 @@
+<div class="container place">
+{{#link-to 'index'}}<h3>Back</h3>{{/link-to}}
+{{place-detail place=model.place}}
+  <h3>Reviews</h3>
+  {{#each model.place.reviews as |review|}}
+  <div class="place">
+  {{review.rating}} - {{review.content}} -  by {{review.author}}<br>
+  </div>
+  {{/each}}
+</div>
